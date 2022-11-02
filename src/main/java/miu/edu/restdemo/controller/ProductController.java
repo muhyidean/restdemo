@@ -5,6 +5,7 @@ import miu.edu.restdemo.domain.dto.response.ProductDetailsDto;
 import miu.edu.restdemo.domain.dto.response.ProductDto;
 import miu.edu.restdemo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,14 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
+
+    // You can add another
+//    @Autowired
+////    @Qualifier("productServicePromise")
+//    ProductService productService;
+
+//    @Autowired
+//    ProductService productServicePromise;
 
 
     @GetMapping() // GET - api/v1/products
